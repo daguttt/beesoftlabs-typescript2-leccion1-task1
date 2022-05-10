@@ -3,3 +3,7 @@
 ## Tasks - Array handling
 
 ![Tasks](/images/tasks.png)
+
+> Array found at first in src/index.ts
+>
+> -_daguttt_
