@@ -80,7 +80,7 @@ function giveTwoPointsToStudentWithLowAverage(
         promedio: student.promedio + 2,
       };
     });
-  // Replace student in the given array
+  // Replace students who have been modified
   return studentList.map((student) => {
     for (const studentWhoGotTwoPoints of studentsWhoGotTwoPoints) {
       if (student.nombre !== studentWhoGotTwoPoints.nombre) continue;
