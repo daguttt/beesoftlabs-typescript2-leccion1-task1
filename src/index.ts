@@ -54,9 +54,10 @@ function getStudentsAverageLessThanSix(
   studentList: Array<Alumno>
 ): Array<Alumno> {
   return studentList.filter(
-    (student) => student.promedio > 6 && student.edad < 19
+    (student) => student.promedio < 6 && student.edad > 19
   );
 }
+console.log(getStudentsAverageLessThanSix(alumnos));
 // -**********************************-
 // Task 3
 function getSortedAscendingStudentsAverages(
@@ -82,7 +83,7 @@ function giveTwoPointsToStudentWithLowAverage(
     return student;
   });
 }
-console.log(giveTwoPointsToStudentWithLowAverage(alumnos));
+// console.log(giveTwoPointsToStudentWithLowAverage(alumnos));
 // -**********************************-
 // Task 5
 function getGeneralAverage(studentList: Array<Alumno>): number {
