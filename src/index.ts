@@ -70,26 +70,19 @@ function getSortedAscendingStudentsAverages(
 function giveTwoPointsToStudentWithLowAverage(
   studentList: Array<Alumno>
 ): Array<Alumno> {
-  const studentsWhoGotTwoPoints: Array<Alumno> = studentList
-    .filter((student) => student.promedio <= 4)
-    .map((student) => {
+  return studentList.map((student) => {
+    if (student.promedio <= 4) {
       return {
         nombre: student.nombre,
         edad: student.edad,
         correo: student.correo,
         promedio: student.promedio + 2,
       };
-    });
-  // Replace students who have been modified
-  return studentList.map((student) => {
-    for (const studentWhoGotTwoPoints of studentsWhoGotTwoPoints) {
-      if (student.nombre !== studentWhoGotTwoPoints.nombre) continue;
-      return studentWhoGotTwoPoints;
     }
     return student;
   });
 }
-// console.log(giveTwoPointsToStudentWithLowAverage(alumnos));
+console.log(giveTwoPointsToStudentWithLowAverage(alumnos));
 // -**********************************-
 // Task 5
 function getGeneralAverage(studentList: Array<Alumno>): number {
